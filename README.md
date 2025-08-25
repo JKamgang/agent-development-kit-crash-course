@@ -24,6 +24,15 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
+
+# -- 20250824 -- Note by Jean Baptiste
+# Curation
+# If python install pandas -- failed to install then run
+>> python -m pip install --upgrade pip setuptools wheel
+>> pip install pandas
+>> pip install -r requirements.txt --no-build-isolation
+>>
+
 Once set up, this single environment will work for all examples in the repository.
 
 ### Setting Up API Keys
