@@ -122,3 +122,22 @@ The ADK CLI tool provides several options:
 You can exit the conversation or stop the server by pressing `Ctrl+C` in your terminal.
 
 This example demonstrates a simple agent that responds to greeting-related queries, showing the fundamentals of agent creation with ADK.
+
+# -- Notes from Jean Baptiste
+# 20250825 -- Curation
+
+# Error deprecated package missing
+# That error means your code (specifically google.adk.tools.base_tool.py) is trying to import the deprecated package, but it’s not installed in your virtual environment.
+
+# You can fix it by installing the missing dependency:
+(.venv) PS C:\Users\jkamg\OneDrive\Documents\GitHub\agent-development-kit-crash-course\1-basic-agent> pip install deprecated
+
+# After that, rerun:
+
+adk
+
+
+
+# If you’re not sure a requirements.txt exists in the crash course repo, you can list missing deps with:
+
+pip check

@@ -27,7 +27,26 @@ pip install -r requirements.txt
 
 # -- 20250824 -- Note by Jean Baptiste
 # Curation
-# If python install pandas -- failed to install then run
+
+
+# -- PowerShell is blocking the activation script for your virtual environment due to its execution policy:
+.venv\Scripts\Activate.ps1 cannot be loaded because running scripts is disabled on this system.
+
+# Because the virtual environment wasn't activated, the command pip is not found:
+How to fix:
+
+# 1. Open PowerShell as Administrator and run:
+# This allows local scripts (like your venv activation) to run.
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+# 2. Close and reopen your terminal, then activate your environment again:
+
+How to fix:
+
+Open PowerShell as Administrator and run:
+This allows local scripts (like your venv activation) to run.
+
+
+# If python install pandas -- failed to install (on windows 11, 64 bit operating system on ARM-based processor architecture) then run
 >> python -m pip install --upgrade pip setuptools wheel
 >> pip install pandas
 >> pip install -r requirements.txt --no-build-isolation
